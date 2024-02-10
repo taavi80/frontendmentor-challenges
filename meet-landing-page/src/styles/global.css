@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "RedHat";
+  src: url("/assets/fonts/RedHatDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -6,7 +13,7 @@
   box-sizing: border-box;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
   height: auto;
