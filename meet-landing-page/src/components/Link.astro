@@ -1,0 +1,24 @@
+---
+const { linkText, bgColor } = Astro.props;
+---
+
+<div class="link-container">
+  <a href='https://example.com'>{linkText}</a>
+</div>
+
+<style define:vars={{ bgColor }}>
+  .link-container {
+    text-align: center;
+  }
+  a {
+    background-color: var(--bgColor);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    padding: 1rem 1.6rem;
+    border: none;
+    border-radius: 25px;
+    display: inline-block;
+  }
+</style>

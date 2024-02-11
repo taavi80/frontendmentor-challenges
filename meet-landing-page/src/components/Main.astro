@@ -1,59 +1,43 @@
+---
+import Hero from "./Hero.astro";
+import Button from "./Button.astro";
+import Link from "./Link.astro";
+
+const buttonText = "Download";
+const buttonVersion = "v1.3";
+const bgColor1 = "#4D96A9";
+const bgColor2 = "#855FB1";
+const linkText = "What is it?";
+---
+
 <main>
-  <div class='images__container'>
-    <img
-      class='images__container__leftImg'
-      src='/assets/desktop/image-hero-left.png'
-      alt=''
-      width='394'
-      height='303'
-    />
-    <img
-      class='images__container__rightImg'
-      src='/assets/desktop/image-hero-right.png'
-      alt=''
-      width='394'
-      height='303'
-    />
-  </div>
+  <Hero />
   <h1>Group Chat for Everyone</h1>
   <p>
     Meet makes it easy to connect with others face-to-face virtually and
     collaborate across any device.
   </p>
+  <Button text={buttonText} version={buttonVersion} bgColor={bgColor1} />
+  <Link linkText={linkText} bgColor={bgColor2}>
 </main>
 
 <style>
-  main {
-    font-family: "RedHat", sans-serif;
-  }
-  .images__container {
-    display: flex;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-  }
-  .images__container img {
-    width: 50%;
-  }
-  .images__container__leftImg {
-    transform: translateX(-4%);
-  }
-  .images__container__rightImg {
-    transform: translateX(4%);
-  }
   h1 {
     max-width: 267px;
+    color: #28283d;
     font-size: 2.3rem;
     font-weight: 900;
     line-height: 1.2;
     text-align: center;
     margin-inline: auto;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.3rem;
   }
   p {
-    font-size: 1.1rem;
+    color: #87879d;
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
-    padding-inline: .8rem;
+    padding-inline: 0.8rem;
+    margin-bottom: 1.6rem;
   }
 </style>
