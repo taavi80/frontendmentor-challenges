@@ -2,42 +2,87 @@
 import Hero from "./Hero.astro";
 import Button from "./Button.astro";
 import Link from "./Link.astro";
+import ImagesGrid from "./ImagesGrid.astro";
 
 const buttonText = "Download";
 const buttonVersion = "v1.3";
 const bgColor1 = "#4D96A9";
 const bgColor2 = "#855FB1";
-const linkText = "What is it?";
 ---
 
 <main>
   <Hero />
-  <h1>Group Chat for Everyone</h1>
-  <p>
-    Meet makes it easy to connect with others face-to-face virtually and
-    collaborate across any device.
-  </p>
-  <Button text={buttonText} version={buttonVersion} bgColor={bgColor1} />
-  <Link linkText={linkText} bgColor={bgColor2}>
+  <section class='main-intro'>
+    <h1 class='main-intro__title'>Group Chat for Everyone</h1>
+    <p class='main-intro__description'>
+      Meet makes it easy to connect with others face-to-face virtually and
+      collaborate across any device.
+    </p>
+    <Button
+      className='main-intro__button'
+      text={buttonText}
+      version={buttonVersion}
+      bgColor={bgColor1}
+    />
+    <Link class='main-intro__link' bgColor={bgColor2} />
+  </section>
+
+  <div class='main-divider'>
+    <img
+      class='main-divider__vertical'
+      src='/assets/01.svg'
+      alt=''
+      width='55'
+      height='55'
+    />
+  </div>
+
+  <ImagesGrid />
+
+  <section class='main-features'>
+    <h2 class='main-features__title'>Built for modern use</h2>
+    <h3 class='main-features__subtitle'>Smarter meetings, all in one place</h3>
+    <p class='main-features__description'>
+      Send messages, share files, show your screen, and record your meetings —
+      all in one workspace. Control who can join with invite-only team access,
+      data encryption, and data export.
+    </p>
+  </section>
 </main>
 
 <style>
-  h1 {
+  main {
+    text-align: center;
+  }
+
+  .main-intro__title {
     max-width: 267px;
     color: #28283d;
     font-size: 2.3rem;
     font-weight: 900;
     line-height: 1.2;
-    text-align: center;
     margin-inline: auto;
     margin-bottom: 1.3rem;
   }
-  p {
+  .main-intro__description {
     color: #87879d;
     font-weight: 400;
     line-height: 1.5;
-    text-align: center;
     padding-inline: 0.8rem;
     margin-bottom: 1.6rem;
+  }
+  .main-intro__button {
+    margin-bottom: .9rem;
+  }
+
+  .main-divider__vertical {
+    margin: 3rem auto;
+  }
+
+  h2 {
+    color: #4d96a9;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
 </style>
