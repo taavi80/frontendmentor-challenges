@@ -1,3 +1,71 @@
+---
+import Button from "./Button.astro";
+
+const buttonText = "Download";
+const buttonV = "v1.3";
+const buttonSpanColor = "#D9B8FF";
+const bgColor2 = "#855FB1";
+---
+
 <footer>
-  <p>footer</p>
+  <img
+    class='footer-divider__vertical'
+    src='/assets/02.svg'
+    alt=''
+    width='56'
+    height='140'
+  />
+
+  <h3 class='footer__title'>Experience more together</h3>
+  <p class='footer__description'>
+    Stay connected with reliable HD meetings and unlimited one-on-one and group
+    video sessions.
+  </p>
+  <Button
+    className='footer__button'
+    text={buttonText}
+    version={buttonV}
+    spanColor={buttonSpanColor}
+    bgColor={bgColor2}
+  />
 </footer>
+
+<style>
+  footer {
+    position: relative;
+    background: linear-gradient(
+        rgba(77, 150, 169, 0.9),
+        rgba(77, 150, 169, 0.9)
+      ),
+      url("/assets/mobile/image-footer.jpg");
+    background-size: cover;
+    text-align: center;
+  }
+
+  .footer-divider__vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -80%);
+  }
+  .footer__title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 5rem;
+    margin-bottom: 1.3rem;
+  }
+  .footer__description {
+    max-width: 285px;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+    margin-inline: auto;
+    margin-bottom: 1.6rem;
+  }
+  .footer__button {
+    margin-bottom: 4rem;
+  }
+</style>

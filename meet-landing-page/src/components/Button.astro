@@ -1,13 +1,11 @@
 ---
 const { class: className, ...rest } = Astro.props;
-const { text, version, bgColor } = Astro.props;
+const { text, version, spanColor, bgColor } = Astro.props;
 ---
 
-<button class={className} {...rest}
-  >{text} <span style={{ color: "#8fe3f9" }}>{version}</span></button
->
+<button class={className} {...rest}>{text} <span>{version}</span></button>
 
-<style define:vars={{ bgColor }}>
+<style define:vars={{ spanColor, bgColor }}>
   button {
     background-color: var(--bgColor);
     color: #ffffff;
@@ -19,5 +17,8 @@ const { text, version, bgColor } = Astro.props;
     border: none;
     border-radius: 25px;
     cursor: pointer;
+  }
+  button span{
+    color: var(--spanColor);
   }
 </style>
