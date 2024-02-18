@@ -1,37 +1,18 @@
 ---
 import Hero from "./Hero.astro";
-import Button from "./Button.astro";
-import Link from "./Link.astro";
+import MainIntro from "./MainIntro.astro";
 import ImagesGrid from "./ImagesGrid.astro";
-
-const buttonText = "Download";
-const buttonV = "v1.3";
-const buttonSpanColor = "#8fe3f9";
-const bgColor1 = "#4D96A9";
-const bgColor2 = "#855FB1";
+import MainFeatures from "./MainFeatures.astro";
 ---
 
 <main>
   <Hero />
-  <section class='main-intro'>
-    <h1 class='main-intro__title'>Group Chat for Everyone</h1>
-    <p class='main-intro__description'>
-      Meet makes it easy to connect with others face-to-face virtually and
-      collaborate across any device.
-    </p>
-    <Button
-      className='main-intro__button'
-      text={buttonText}
-      version={buttonV}
-      spanColor={buttonSpanColor}
-      bgColor={bgColor1}
-    />
-    <Link bgColor={bgColor2} />
-  </section>
+
+  <MainIntro />
 
   <div class='main-divider'>
     <img
-      class='main-divider__vertical'
+      class='main-divider__img'
       src='/assets/01.svg'
       alt=''
       width='56'
@@ -41,15 +22,8 @@ const bgColor2 = "#855FB1";
 
   <ImagesGrid />
 
-  <section class='main-features'>
-    <h2 class='main-features__title'>Built for modern use</h2>
-    <h3 class='main-features__subtitle'>Smarter meetings, all in one place</h3>
-    <p class='main-features__description'>
-      Send messages, share files, show your screen, and record your meetings —
-      all in one workspace. Control who can join with invite-only team access,
-      data encryption, and data export.
-    </p>
-  </section>
+  <MainFeatures />
+
 </main>
 
 <style>
@@ -57,54 +31,8 @@ const bgColor2 = "#855FB1";
     text-align: center;
   }
 
-  .main-intro__title {
-    max-width: 267px;
-    color: #28283d;
-    font-size: 2.3rem;
-    font-weight: 900;
-    line-height: 1.2;
-    margin-inline: auto;
-    margin-bottom: 1.3rem;
-  }
-  .main-intro__description {
-    color: #87879d;
-    font-weight: 400;
-    line-height: 1.5;
-    padding-inline: 0.8rem;
-    margin-bottom: 1.6rem;
-  }
-  .main-intro__button {
-    margin-bottom: 0.9rem;
-  }
-  .main-intro__button span {
-    color: #8fe3f9;
-  }
-
-  .main-divider__vertical {
+  .main-divider__img {
     margin: 3rem auto;
   }
 
-  .main-features {
-    padding: 0.9rem;
-  }
-  .main-features__title {
-    color: #4d96a9;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-  }
-  .main-features__subtitle {
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1.2;
-    margin-bottom: 1.6rem;
-  }
-  .main-features__description {
-    max-width: 289px;
-    color: #87879d;
-    line-height: 1.5;
-    margin-inline: auto;
-    margin-bottom: 9rem;
-  }
 </style>

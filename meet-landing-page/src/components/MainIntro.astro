@@ -1,0 +1,53 @@
+---
+import Button from "./Button.astro";
+import Link from "./Link.astro";
+
+const buttonText = "Download";
+const buttonV = "v1.3";
+const buttonSpanColor = "#8fe3f9";
+const bgColor1 = "#4D96A9";
+const bgColor2 = "#855FB1";
+---
+
+<section class='main-intro'>
+  <h1 class='main-intro__title'>Group Chat for Everyone</h1>
+  <p class='main-intro__description'>
+    Meet makes it easy to connect with others face-to-face virtually and
+    collaborate across any device.
+  </p>
+  <Button
+    className='main-intro__button'
+    text={buttonText}
+    version={buttonV}
+    spanColor={buttonSpanColor}
+    bgColor={bgColor1}
+  />
+  <Link bgColor={bgColor2} />
+</section>
+
+<style>
+  .main-intro__title {
+    max-width: 267px;
+    color: #28283d;
+    font-size: 2.3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    padding-inline: 0.6rem;
+    margin-inline: auto;
+    margin-bottom: 1.3rem;
+  }
+  .main-intro__description {
+    color: #87879d;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-inline: 0.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .main-intro__button {
+    margin-bottom: 0.9rem;
+  }
+  .main-intro__button span {
+    color: #8fe3f9;
+  }
+</style>

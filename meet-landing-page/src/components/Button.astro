@@ -1,6 +1,5 @@
 ---
-const { class: className, ...rest } = Astro.props;
-const { text, version, spanColor, bgColor } = Astro.props;
+const { class: className, text, version, spanColor, bgColor, ...rest } = Astro.props;
 ---
 
 <button class={className} {...rest}>{text} <span>{version}</span></button>
