@@ -15,17 +15,23 @@ const bgColor2 = "#855FB1";
     Meet makes it easy to connect with others face-to-face virtually and
     collaborate across any device.
   </p>
-  <Button
-    className='main-intro__button'
-    text={buttonText}
-    version={buttonV}
-    spanColor={buttonSpanColor}
-    bgColor={bgColor1}
-  />
-  <Link bgColor={bgColor2} />
+  
+  <div class="main-intro__btnAndLink">
+    
+      <Button
+        className='main-intro__button'
+        text={buttonText}
+        version={buttonV}
+        spanColor={buttonSpanColor}
+        bgColor={bgColor1}
+      />
+      <Link bgColor={bgColor2} />
+
+  </div>
 </section>
 
 <style>
+
   .main-intro__title {
     max-width: 267px;
     color: #28283d;
@@ -49,5 +55,20 @@ const bgColor2 = "#855FB1";
   }
   .main-intro__button span {
     color: #8fe3f9;
+  }
+
+  @media (min-width: 768px) {
+    .main-intro__title {
+    max-width: 327px;
+    font-size: 3rem;
+  }
+  .main-intro__description {
+     max-width: 457px;
+     margin-inline: auto;
+   }
+  .main-intro__btnAndLink{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
   }
 </style>

@@ -42,7 +42,7 @@ const bgColor2 = "#855FB1";
       url("/assets/mobile/image-footer.jpg");
     background-size: cover;
     text-align: center;
-    padding-inline: .6rem;
+    padding-inline: 0.6rem;
   }
 
   .footer-divider__img {
@@ -70,5 +70,28 @@ const bgColor2 = "#855FB1";
   }
   .footer__button {
     margin-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      background: linear-gradient(
+          rgba(77, 150, 169, 0.9),
+          rgba(77, 150, 169, 0.9)
+        ),
+        url("/assets/tablet/image-footer.jpg");
+    }
+
+    .footer__title {
+      max-width: 330px;
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-inline: auto;
+      margin-bottom: 1.6rem;
+    }
+    .footer__description {
+      max-width: 510px;
+      line-height: 1.5;
+      margin-bottom: 2.3rem;
+    }
   }
 </style>
