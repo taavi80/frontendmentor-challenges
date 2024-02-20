@@ -1,41 +1,56 @@
 <div class='hero-images'>
   <img
-    class='hero-images__left'
-    src='/assets/desktop/image-hero-left.png'
+    class='hero-image mobile-image'
+    src='/assets/tablet/image-hero.png'
     alt=''
-    width='394'
-    height='303'
   />
   <img
-    class='hero-images__right'
+    class='hero-image tablet-desktop-image left-image'
+    src='/assets/desktop/image-hero-left.png'
+    alt=''
+  />
+  <img
+    class='hero-image tablet-desktop-image right-image'
     src='/assets/desktop/image-hero-right.png'
     alt=''
-    width='394'
-    height='303'
   />
 </div>
 
 <style>
   .hero-images {
-    width: 106%;
-    display: flex;
+    position: relative;
+    width: 109%;
     margin-top: 4rem;
     margin-bottom: 3rem;
-    transform: translateX(-3%);
+    transform: translateX(-5%);
   }
-  .hero-images img {
-    width: 50%;
+
+  .hero-image {
+    display: none;
   }
-  .hero-images__left {
-    transform: translateX(-4%);
+
+  .mobile-image {
+    display: block;
   }
-  .hero-images__right {
-    transform: translateX(4%);
-  }
-  @media (min-width: 768px){
+
+  @media (min-width: 768px) {
     .hero-images {
-      width: 103%;
-      transform: translateX(-1.5%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translate(0);
+    }
+    .mobile-image {
+      display: none;
+    }
+    .tablet-desktop-image {
+      display: block;
+    }
+    .left-image {
+      transform: translateX(-8%);
+    }
+    .right-image {
+      transform: translateX(8%);
     }
   }
 </style>
