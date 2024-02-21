@@ -1,5 +1,12 @@
 ---
-const { class: className, text, version, spanColor, bgColor, ...rest } = Astro.props;
+const {
+  class: className,
+  text,
+  version,
+  spanColor,
+  bgColor,
+  ...rest
+} = Astro.props;
 ---
 
 <button class={className} {...rest}>{text} <span>{version}</span></button>
@@ -17,7 +24,10 @@ const { class: className, text, version, spanColor, bgColor, ...rest } = Astro.p
     border-radius: 25px;
     cursor: pointer;
   }
-  button span{
+  button:hover {
+    filter: brightness(110%);
+  }
+  button span {
     color: var(--spanColor);
   }
 </style>

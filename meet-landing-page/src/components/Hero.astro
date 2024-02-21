@@ -5,12 +5,12 @@
     alt=''
   />
   <img
-    class='hero-image tablet-desktop-image left-image'
+    class='hero-image tablet-image left-image'
     src='/assets/desktop/image-hero-left.png'
     alt=''
   />
   <img
-    class='hero-image tablet-desktop-image right-image'
+    class='hero-image tablet-image right-image'
     src='/assets/desktop/image-hero-right.png'
     alt=''
   />
@@ -43,7 +43,7 @@
     .mobile-image {
       display: none;
     }
-    .tablet-desktop-image {
+    .tablet-image {
       display: block;
     }
     .left-image {
@@ -51,6 +51,11 @@
     }
     .right-image {
       transform: translateX(8%);
+    }
+  }
+  @media (min-width: 1440px) {
+    .hero-image {
+      display: none;
     }
   }
 </style>

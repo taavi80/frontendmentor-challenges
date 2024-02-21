@@ -6,9 +6,10 @@ import MainFeatures from "./MainFeatures.astro";
 ---
 
 <main>
-  <Hero />
-
-  <MainIntro />
+  <div class='main-container'>
+    <Hero />
+    <MainIntro />
+  </div>
 
   <div class='main-divider'>
     <img
@@ -23,16 +24,23 @@ import MainFeatures from "./MainFeatures.astro";
   <ImagesGrid />
 
   <MainFeatures />
-
 </main>
 
 <style>
   main {
     text-align: center;
   }
-
   .main-divider__img {
     margin: 3rem auto;
   }
 
+  @media (min-width: 1440px) {
+    .main-container {
+      background-image: url("/assets/desktop/image-hero-left.png"),
+        url("/assets/desktop/image-hero-right.png");
+      background-size: contain;
+      background-repeat: no-repeat, no-repeat;
+      background-position: calc(0% - 40px), calc(100% + 40px);
+    }
+  }
 </style>
