@@ -17,19 +17,20 @@ const bgColor2 = "#855FB1";
       height='140'
     />
   </div>
-
-  <h3 class='footer__title'>Experience more together</h3>
-  <p class='footer__description'>
-    Stay connected with reliable HD meetings and unlimited one-on-one and group
-    video sessions.
-  </p>
-  <Button
-    className='footer__button'
-    text={buttonText}
-    version={buttonV}
-    spanColor={buttonSpanColor}
-    bgColor={bgColor2}
-  />
+  <div class='footer-container'>
+    <h3 class='footer-container__title'>Experience more together</h3>
+    <p class='footer-container__description'>
+      Stay connected with reliable HD meetings and unlimited one-on-one and
+      group video sessions.
+    </p>
+    <Button
+      className='footer-container__button'
+      text={buttonText}
+      version={buttonV}
+      spanColor={buttonSpanColor}
+      bgColor={bgColor2}
+    />
+  </div>
 </footer>
 
 <style>
@@ -51,7 +52,7 @@ const bgColor2 = "#855FB1";
     left: 50%;
     transform: translate(-50%, -80%);
   }
-  .footer__title {
+  .footer-container__title {
     color: #ffffff;
     font-size: 2rem;
     font-weight: 700;
@@ -60,7 +61,7 @@ const bgColor2 = "#855FB1";
     padding-top: 5rem;
     margin-bottom: 1.3rem;
   }
-  .footer__description {
+  .footer-container__description {
     max-width: 285px;
     color: #ffffff;
     line-height: 1.5;
@@ -68,7 +69,7 @@ const bgColor2 = "#855FB1";
     margin-inline: auto;
     margin-bottom: 1.6rem;
   }
-  .footer__button {
+  .footer-container__button {
     margin-bottom: 4rem;
   }
 
@@ -79,6 +80,7 @@ const bgColor2 = "#855FB1";
           rgba(77, 150, 169, 0.9)
         ),
         url("/assets/tablet/image-footer.jpg");
+      background-size: cover;
     }
 
     .footer__title {
@@ -92,6 +94,39 @@ const bgColor2 = "#855FB1";
       max-width: 510px;
       line-height: 1.5;
       margin-bottom: 2.3rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    footer {
+      background-image: linear-gradient(
+          rgba(77, 150, 169, 0.9),
+          rgba(77, 150, 169, 0.9)
+        ),
+        url("/assets/desktop/image-footer.jpg");
+      background-size: cover;
+    }
+    .footer-container {
+      max-width: 1110px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9rem 0;
+      margin-inline: auto;
+    }
+    .footer-container__title {
+      max-width: 330px;
+      text-align: initial;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-container__description {
+      max-width: 330px;
+      font-size: 1.1rem;
+      text-align: initial;
+      margin: 0;
+    }
+    .footer-container__button {
+      margin: 0;
     }
   }
 </style>
