@@ -4,7 +4,7 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](src/assets/design/frontendmentor-meet-landing-page.netlify.app.png)
+![](public/assets/design/frontendmentor-meet-landing-page.netlify.app.png)
 
 - Live Site URL: https://frontendmentor-meet-landing-page.netlify.app/
 
